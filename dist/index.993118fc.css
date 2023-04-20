@@ -1,0 +1,275 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400italic";
+nav a#selected {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+nav.navegacion a:hover {
+  color: #00bfff;
+}
+
+body.index, nav.navegacion a {
+  color: #fff;
+  font-family: monospace;
+  text-decoration-line: none;
+}
+
+nav.subnavegacion {
+  margin-top: 30px;
+}
+
+nav.subnavegacion a:hover {
+  color: #20b2aa;
+}
+
+nav.subnavegacion a {
+  color: #fff;
+  font-family: monospace;
+  text-decoration-line: none;
+}
+
+nav a#selectedSubmenu {
+  color: #20b2aa;
+  font-weight: bold;
+}
+
+body.index {
+  min-height: 100%;
+  width: 70%;
+  background-image: url("background.1f14848b.jpg");
+  background-size: cover;
+  margin: auto;
+  display: table;
+}
+
+body#otherPage {
+  background-image: url("background2.033ccfca.jpg");
+  position: relative;
+}
+
+header.index {
+  height: 20px;
+  margin-top: 25px;
+}
+
+header.submenu {
+  height: 10px;
+  margin-top: 0;
+}
+
+div.contenido {
+  min-height: calc(100% - 200px);
+  width: 80%;
+  text-align: center;
+  margin: 50px auto auto;
+  font-family: monospace;
+  line-height: 110%;
+  position: relative;
+}
+
+div.contenido h1 {
+  color: #00bfff;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-top: 10px;
+  font-size: 170%;
+}
+
+div.contenido h2 {
+  color: #20b2aa;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-top: 10px;
+  font-size: 140%;
+}
+
+div.contenido p {
+  text-align: justify;
+  font-size: 13px;
+  line-height: 170%;
+}
+
+div.contenido li {
+  text-align: justify;
+  margin-top: 8px;
+  font-size: 12px;
+  list-style-type: square;
+}
+
+div.contenido ul {
+  padding-bottom: 25px;
+}
+
+div.imagenPagina {
+  width: 800px;
+  height: 500px;
+  display: flex;
+}
+
+div.imagenPagina img {
+  width: 100%;
+  height: auto;
+}
+
+a.enlaceDetalle {
+  color: #fff;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+a.enlaceDetalle:link:hover, a.enlaceDetalle:visited:hover {
+  color: #0ff;
+}
+
+.row {
+  flex-wrap: wrap;
+  padding: 0 4px;
+  display: flex;
+}
+
+.column {
+  max-width: 70%;
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media screen and (width <= 800px) {
+  .column {
+    max-width: 50%;
+    flex: 50%;
+  }
+}
+
+@media screen and (width <= 600px) {
+  .column {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
+
+div.contenido iframe {
+  width: 100%;
+  height: 400px;
+  margin: 64px auto 0;
+  display: block;
+}
+
+div.contenido figcaption.caption-label {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 8%;
+  font-size: 8pt;
+}
+
+div.logoWeb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+div.logoWeb img {
+  vertical-align: middle;
+  width: 140px;
+  height: 140px;
+}
+
+div.logoWeb span {
+  vertical-align: middle;
+  font-family: Inter, sans-serif;
+  font-size: 7em;
+  font-weight: bold;
+}
+
+div.logoWeb p {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.opinion {
+  width: 80%;
+  color: #555;
+  background: #c4d3d4;
+  border-left: 8px solid #20b2aa;
+  margin: 50px auto;
+  padding: 1.2em 30px 1.2em 75px;
+  font-family: monospace;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+}
+
+.opinion:before {
+  content: "“";
+  color: #20b2aa;
+  font-family: Arial;
+  font-size: 4em;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.opinion:after {
+  content: "";
+}
+
+.opinion span {
+  color: #333;
+  margin-top: 1em;
+  font-style: normal;
+  font-weight: bold;
+  display: block;
+}
+
+.botonLike {
+  color: #fff;
+  cursor: pointer;
+  background: #20b2aa;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 60%;
+  padding: 10px 15px;
+  font-size: 18px;
+  transition: all .1s;
+}
+
+.botonLike:hover {
+  background: #87cefa;
+  border: 3px solid #87cefa;
+}
+
+footer.footer {
+  color: #fff;
+  height: 50px;
+  padding-bottom: 45px;
+}
+
+div.footer {
+  width: 100%;
+  margin: auto;
+  padding-top: 8px;
+  padding-bottom: 45px;
+  position: absolute;
+  bottom: 0;
+}
+
+body:after {
+  content: "";
+  height: 50px;
+  display: block;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.993118fc.css.map */
