@@ -306,3 +306,115 @@ body::after {
 footer p {
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 767px) {
+
+	body {
+		font-size: 16px;
+		line-height: 1.6;
+		margin: 0;
+		padding: 0;
+	}
+
+	.logoWeb img {
+		width: 100%;
+	}
+	.logoWeb span {
+		font-size: 24px;
+	}
+	.botonLike {
+		font-size: 14px;
+	}
+
+	header.index {
+		padding: 10px;
+	}
+
+	.navegacion {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.subnavegacion {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.navegacion a {
+		margin: 5px;
+		display: block;
+        padding: 10px;
+	}
+
+	.subnavegacion a {
+		display: block;
+        padding: 10px;
+	}
+
+	.contenido {
+		padding: 20px;
+	}
+
+	.column img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+
+	.footer {
+		padding: 10px;
+		text-align: center;
+	}
+
+	.footer nav {
+		margin-top: 10px;
+	}
+
+	.contenido {
+		padding: 0 10px;
+	}
+
+	.imagenPagina img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.opinion {
+		background-color: #f8f8f8;
+		border-left: 3px solid #333;
+		padding: 20px;
+		margin: 20px 0;
+	}
+
+	.opinion span {
+		display: block;
+		text-align: right;
+		margin-top: 10px;
+		font-style: italic;
+	}
+
+	.submenu {
+		position: static;
+		text-align: center;
+	}
+	
+	.submenu a {
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	/* Estilos para pantalla de ancho mínimo de 768px y ancho máximo de 1023px */
+	.contenido {
+		padding: 0 30px;
+	}
+
+	.imagenPagina img {
+		max-width: 100%;
+		height: auto;
+	}
+}
