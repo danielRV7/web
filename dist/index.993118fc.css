@@ -111,6 +111,10 @@ div.imagenPagina img {
   height: auto;
 }
 
+div.contadorPersonas {
+  margin-top: 2%;
+}
+
 a.enlaceDetalle {
   color: #fff;
   font-family: monospace;
@@ -119,6 +123,13 @@ a.enlaceDetalle {
 
 a.enlaceDetalle:link:hover, a.enlaceDetalle:visited:hover {
   color: #0ff;
+}
+
+label#visitantes {
+  color: #0ff;
+  font-family: monospace;
+  font-size: 120%;
+  font-weight: bold;
 }
 
 .row {
@@ -236,7 +247,7 @@ div.logoWeb p {
   border: none;
   border-radius: 10px;
   outline: none;
-  margin-top: 60%;
+  margin-top: 50%;
   padding: 10px 15px;
   font-size: 18px;
   transition: all .1s;
@@ -270,6 +281,108 @@ body:after {
 
 footer p {
   font-size: 12px;
+}
+
+@media only screen and (width <= 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .logoWeb img {
+    width: 100%;
+  }
+
+  .logoWeb span {
+    font-size: 24px;
+  }
+
+  .botonLike {
+    font-size: 14px;
+  }
+
+  header.index {
+    padding: 10px;
+  }
+
+  .navegacion, .subnavegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+  }
+
+  .navegacion a {
+    margin: 5px;
+    padding: 10px;
+    display: block;
+  }
+
+  .subnavegacion a {
+    padding: 10px;
+    display: block;
+  }
+
+  .column img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footer nav {
+    margin-top: 10px;
+  }
+
+  .contenido {
+    padding: 0 10px;
+  }
+
+  .imagenPagina img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .opinion {
+    background-color: #f8f8f8;
+    border-left: 3px solid #333;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .opinion span {
+    text-align: right;
+    margin-top: 10px;
+    font-style: italic;
+    display: block;
+  }
+
+  .submenu {
+    text-align: center;
+    position: static;
+  }
+
+  .submenu a {
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+@media screen and (width >= 768px) and (width <= 1023px) {
+  .contenido {
+    padding: 0 30px;
+  }
+
+  .imagenPagina img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=index.993118fc.css.map */

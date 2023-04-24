@@ -557,6 +557,9 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"iAksj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _randomNumber = require("random-number");
+var _randomNumberDefault = parcelHelpers.interopDefault(_randomNumber);
 const boton = document.querySelector(".botonLike");
 let likeIcon = document.querySelector("#icon");
 let count = document.querySelector("#count");
@@ -572,6 +575,82 @@ boton.addEventListener("click", ()=>{
         count.textContent--;
     }
 });
+let etiqueta = document.querySelector("#visitantes");
+var options = {
+    min: 1000,
+    max: 1700,
+    integer: true
+};
+etiqueta.innerHTML = (0, _randomNumberDefault.default)(options);
+
+},{"random-number":"bWYRl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bWYRl":[function(require,module,exports) {
+(function(root) {
+    function defaults(options) {
+        var options = options || {};
+        var min = options.min;
+        var max = options.max;
+        var integer = options.integer || false;
+        if (min == null && max == null) {
+            min = 0;
+            max = 1;
+        } else if (min == null) min = max - 1;
+        else if (max == null) max = min + 1;
+        if (max < min) throw new Error("invalid options, max must be >= min");
+        return {
+            min: min,
+            max: max,
+            integer: integer
+        };
+    }
+    function random(options) {
+        options = defaults(options);
+        if (options.max === options.min) return options.min;
+        var r = Math.random() * (options.max - options.min + Number(!!options.integer)) + options.min;
+        return options.integer ? Math.floor(r) : r;
+    }
+    function generator(options) {
+        options = defaults(options);
+        return function(min, max, integer) {
+            options.min = min != null ? min : options.min;
+            options.max = max != null ? max : options.max;
+            options.integer = integer != null ? integer : options.integer;
+            return random(options);
+        };
+    }
+    module.exports = random;
+    module.exports.generator = generator;
+    module.exports.defaults = defaults;
+})(this);
+
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["cuBGZ","iAksj"], "iAksj", "parcelRequire2d1f")
 

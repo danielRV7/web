@@ -17,3 +17,18 @@ boton.addEventListener("click", () => {
 
 });
 
+let etiqueta = document.querySelector("#visitantes")
+
+import rn from 'random-number';
+var options = {
+    min:  1000, max:  1700, integer: true
+}
+
+etiqueta.innerHTML = rn(options);
+
+
+
+
+
+
+

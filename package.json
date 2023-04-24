@@ -16,7 +16,8 @@
     "rimraf": "^4.4.0"
   },
   "dependencies": {
-    "browserlist": "^1.0.1"
+    "browserlist": "^1.0.1",
+    "random-number": "^0.0.9"
   },
   "keywords": [],
   "author": "",

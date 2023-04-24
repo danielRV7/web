@@ -114,6 +114,10 @@ div.imagenPagina img {
 	height: auto;
 }
 
+div.contadorPersonas {
+	margin-top: 2%;
+}
+
 a.enlaceDetalle {
 	font-family: monospace;
 	font-size: 13px;
@@ -126,6 +130,13 @@ a.enlaceDetalle:link:hover{
 
 a.enlaceDetalle:visited:hover{
 	color:aqua;
+}
+
+label#visitantes {
+	color: aqua;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 120%;
 }
 
 /************************************************************* 	
