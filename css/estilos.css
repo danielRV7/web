@@ -35,6 +35,30 @@ nav a#selectedSubmenu {
 	font-weight: bold;
 }
 
+#logoHeader {
+	width: 80px;
+}
+
+#logoFooter {
+	width: 30px;
+}
+
+#imagenClip {
+	width: 400px;
+	border-radius: 5px;
+	clip-path: ellipse(35% 40% at 50% 50%);	
+}
+
+#salonClip {
+	width: 380px;
+	clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+#spaClip {
+	width: 260px;
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
 body.index {
 	min-height: 100%;
 	width: 70%;
@@ -68,6 +92,13 @@ div.contenido {
 	margin-top: 50px;
 	font-family: monospace;
 	line-height: 110%;
+}
+
+div.contenedorImagen {
+	position: static;
+	width: 20%;
+	margin: auto;
+	margin-right: 30px;
 }
 
 div.contenido h1{
@@ -270,6 +301,11 @@ div.logoWeb p {
 	BUTTON LIKE (Funcionalidad JavaScript)
 *********************************/
 
+.divBoton {
+	position: absolute;
+	margin: auto;
+}
+
 .botonLike {
 	padding: 10px 15px;
 	background: lightseagreen;
@@ -318,114 +354,139 @@ footer p {
 	font-size: 12px;
 }
 
+/********************************  	
+	ANIMACION DE LA ESTRELLA SVG
+*********************************/
+
+
+.estrellaSVG {
+	width: 50px;
+	animation-name: star;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-direction: alternate;
+}
+
+@keyframes star {
+	to {
+	  zoom:10%;
+	  opacity:0;
+	}
+	from{
+	  zoom:100%
+	  opacity:1;
+	}
+}
+
+
+/********************************  	
+	RESPONSIVE
+*********************************/
+
 @media only screen and (max-width: 767px) {
 
-	body {
-		font-size: 16px;
-		line-height: 1.6;
-		margin: 0;
-		padding: 0;
-	}
+	/*********** 	
+	Portada
+	************/
 
-	.logoWeb img {
+	body.index {
+		min-height: 100%;
 		width: 100%;
-	}
-	.logoWeb span {
-		font-size: 24px;
-	}
-	.botonLike {
-		font-size: 14px;
+		height: 100%;
+		margin: auto;
+		padding-left: 30px;
+		background-image: url('../images/background.jpg');
+		background-size:auto;
+		display:table;
 	}
 
 	header.index {
-		padding: 10px;
-	}
-
-	.navegacion {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.subnavegacion {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.navegacion a {
-		margin: 5px;
-		display: block;
-        padding: 10px;
-	}
-
-	.subnavegacion a {
-		display: block;
-        padding: 10px;
-	}
-
-	.contenido {
-		padding: 20px;
-	}
-
-	.column img {
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-		margin-bottom: 10px;
-	}
-
-	.footer {
-		padding: 10px;
-		text-align: center;
-	}
-
-	.footer nav {
+		height: 5px;
 		margin-top: 10px;
+		width: 430px;
 	}
 
-	.contenido {
-		padding: 0 10px;
+	div.contadorPersonas {
+		margin-top: 2%;
+		padding-left: 30px;
 	}
 
-	.imagenPagina img {
-		max-width: 100%;
-		height: auto;
-	}
-
-	.opinion {
-		background-color: #f8f8f8;
-		border-left: 3px solid #333;
-		padding: 20px;
-		margin: 20px 0;
-	}
-
-	.opinion span {
-		display: block;
-		text-align: right;
-		margin-top: 10px;
-		font-style: italic;
-	}
-
-	.submenu {
+	div.contenedorImagen {
 		position: static;
-		text-align: center;
+		width: 20%;
+		margin: auto;
+		margin-right: 30px;
+	}
+
+	#imagenClip {
+		padding-top: 150px;
+		width: 200px;
+		border-radius: 5px;
+		clip-path: ellipse(40% 40% at 50% 50%);
+	}
+
+	.divBoton {
+		position: absolute;
+		margin: auto;
+	}
+
+	div.logoWeb {
+		top: 50%;
+		position: absolute;
+		transform: translateY(-70%);
 	}
 	
-	.submenu a {
-		display: block;
-		margin-bottom: 10px;
+	div.logoWeb img {
+		vertical-align: middle;
+		width: 90px;
+		height: 90px;
 	}
+	
+	div.logoWeb span {
+		font-size: 3em;
+		vertical-align: middle;
+		font-weight: bold;
+		font-family: 'Inter', sans-serif;
+	}
+	
+	div.logoWeb p {
+		font-size: 1.1em;
+		font-family: monospace;
+		margin-top: auto;
+		padding-top: 10px;
+	}
+
+	/*********** 	
+	Sitios de interés
+	************/
+
+	#salonClip {
+		width: 200px;
+		clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	}
+	
+	#spaClip {
+		width: 150px;
+		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	}
+
+	div.imagenPagina {
+		width: 360px;
+		height: 250px;
+		display: flex;
+	}
+
+	div.contenido {
+		min-height: calc(100% - 200px);
+		position: relative;
+		width: 90%;
+		margin: auto;
+		text-align: center;
+		margin-top: 50px;
+		font-family: monospace;
+		line-height: 110%;
+	}
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-	/* Estilos para pantalla de ancho mínimo de 768px y ancho máximo de 1023px */
-	.contenido {
-		padding: 0 30px;
-	}
-
-	.imagenPagina img {
-		max-width: 100%;
-		height: auto;
-	}
-}

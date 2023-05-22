@@ -33,17 +33,41 @@ nav a#selectedSubmenu {
   font-weight: bold;
 }
 
+#logoHeader {
+  width: 80px;
+}
+
+#logoFooter {
+  width: 30px;
+}
+
+#imagenClip {
+  width: 400px;
+  clip-path: ellipse(35% 40%);
+  border-radius: 5px;
+}
+
+#salonClip {
+  width: 380px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+#spaClip {
+  width: 260px;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
 body.index {
   min-height: 100%;
   width: 70%;
-  background-image: url("background.1f14848b.jpg");
+  background-image: url("background.d51e0974.jpeg");
   background-size: cover;
   margin: auto;
   display: table;
 }
 
 body#otherPage {
-  background-image: url("background2.033ccfca.jpg");
+  background-image: url("background2.daa05c35.jpeg");
   position: relative;
 }
 
@@ -65,6 +89,12 @@ div.contenido {
   font-family: monospace;
   line-height: 110%;
   position: relative;
+}
+
+div.contenedorImagen {
+  width: 20%;
+  margin: auto 30px auto auto;
+  position: static;
 }
 
 div.contenido h1 {
@@ -240,6 +270,11 @@ div.logoWeb p {
   display: block;
 }
 
+.divBoton {
+  margin: auto;
+  position: absolute;
+}
+
 .botonLike {
   color: #fff;
   cursor: pointer;
@@ -283,105 +318,117 @@ footer p {
   font-size: 12px;
 }
 
-@media only screen and (width <= 767px) {
-  body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.6;
+.estrellaSVG {
+  width: 50px;
+  animation-name: star;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes star {
+  to {
+    zoom: 10%;
+    opacity: 0;
   }
 
-  .logoWeb img {
-    width: 100%;
-  }
-
-  .logoWeb span {
-    font-size: 24px;
-  }
-
-  .botonLike {
-    font-size: 14px;
-  }
-
-  header.index {
-    padding: 10px;
-  }
-
-  .navegacion, .subnavegacion {
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-  }
-
-  .navegacion a {
-    margin: 5px;
-    padding: 10px;
-    display: block;
-  }
-
-  .subnavegacion a {
-    padding: 10px;
-    display: block;
-  }
-
-  .column img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .footer {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .footer nav {
-    margin-top: 10px;
-  }
-
-  .contenido {
-    padding: 0 10px;
-  }
-
-  .imagenPagina img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .opinion {
-    background-color: #f8f8f8;
-    border-left: 3px solid #333;
-    margin: 20px 0;
-    padding: 20px;
-  }
-
-  .opinion span {
-    text-align: right;
-    margin-top: 10px;
-    font-style: italic;
-    display: block;
-  }
-
-  .submenu {
-    text-align: center;
-    position: static;
-  }
-
-  .submenu a {
-    margin-bottom: 10px;
-    display: block;
+  from {
+    zoom: 100% opacity:1;
   }
 }
 
-@media screen and (width >= 768px) and (width <= 1023px) {
-  .contenido {
-    padding: 0 30px;
+@media only screen and (width <= 767px) {
+  body.index {
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: url("background.d51e0974.jpeg");
+    background-size: auto;
+    margin: auto;
+    padding-left: 30px;
+    display: table;
   }
 
-  .imagenPagina img {
-    max-width: 100%;
-    height: auto;
+  header.index {
+    height: 5px;
+    width: 430px;
+    margin-top: 10px;
+  }
+
+  div.contadorPersonas {
+    margin-top: 2%;
+    padding-left: 30px;
+  }
+
+  div.contenedorImagen {
+    width: 20%;
+    margin: auto 30px auto auto;
+    position: static;
+  }
+
+  #imagenClip {
+    width: 200px;
+    clip-path: ellipse(40% 40%);
+    border-radius: 5px;
+    padding-top: 150px;
+  }
+
+  .divBoton {
+    margin: auto;
+    position: absolute;
+  }
+
+  div.logoWeb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+  }
+
+  div.logoWeb img {
+    vertical-align: middle;
+    width: 90px;
+    height: 90px;
+  }
+
+  div.logoWeb span {
+    vertical-align: middle;
+    font-family: Inter, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  div.logoWeb p {
+    margin-top: auto;
+    padding-top: 10px;
+    font-family: monospace;
+    font-size: 1.1em;
+  }
+
+  #salonClip {
+    width: 200px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  }
+
+  #spaClip {
+    width: 150px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+
+  div.imagenPagina {
+    width: 360px;
+    height: 250px;
+    display: flex;
+  }
+
+  div.contenido {
+    min-height: calc(100% - 200px);
+    width: 90%;
+    text-align: center;
+    margin: 50px auto auto;
+    font-family: monospace;
+    line-height: 110%;
+    position: relative;
   }
 }
 
