@@ -370,12 +370,12 @@ footer p {
 
 @keyframes star {
 	to {
-	  zoom:10%;
-	  opacity:0;
+		zoom:10%;
+		opacity:0;
 	}
 	from{
-	  zoom:100%
-	  opacity:1;
+		zoom:100%;
+		opacity:1;
 	}
 }
 
