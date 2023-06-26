@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "browserlist": "^1.0.1",
-    "random-number": "^0.0.9"
+    "random-number": "^0.0.9",
+    "vanilla-lazyload": "^17.8.3"
   },
   "keywords": [],
   "author": "",
